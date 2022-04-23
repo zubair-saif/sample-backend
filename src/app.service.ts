@@ -27,4 +27,7 @@ export class AppService {
       new CreateUserEvent(createUserRequest.email),
     );
   }
+  getAnalytics() {
+    return this.analyticsClient.send({ cmd: 'get_analytics' }, {});
+  }
 }
